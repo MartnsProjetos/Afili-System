@@ -1,15 +1,15 @@
-🚀 Sistema de Afiliados com Kwify | mrnexacademic
+🚀 Affiliate System with Kwify | mrnexacademic
 
-Este sistema de gestão de afiliados utiliza Kwify para otimizar o rastreamento e gerenciamento de comissões. Com integração fácil a plataformas como Bagy, Tray e NuvemShop, oferece um painel completo para anunciantes e afiliados.
+This affiliate management system uses Kwify to optimize tracking and commission management. With easy integration into platforms like Bagy, Tray, and NuvemShop, it provides a complete dashboard for advertisers and affiliates.
 
-🌟 Recursos Principais
+🌟 Key Features
 
-🔹 Automação com Kwify – Gerenciamento eficiente de afiliados e comissões.
-🔹 Painel do Afiliado – Acompanhe cliques, conversões e ganhos em tempo real.
-🔹 Painel do Anunciante – Controle afiliados, campanhas e relatórios com facilidade.
-🔹 Rastreamento Preciso – Monitoramento avançado das vendas e desempenho.
-🔹 Interface Responsiva – Funciona perfeitamente no celular e no desktop.
+🔹 Automation with Kwify – Efficient management of affiliates and commissions.
+🔹 Affiliate Dashboard – Track clicks, conversions, and earnings in real time.
+🔹 Advertiser Dashboard – Easily manage affiliates, campaigns, and reports.
+🔹 Precise Tracking – Advanced monitoring of sales and performance.
+🔹 Responsive Interface – Works seamlessly on mobile and desktop.
 
-💡 Uma solução moderna e eficiente para quem trabalha com marketing de afiliados!
+💡 A modern and efficient solution for affiliate marketing professionals!
 
-📌 Acesse o site https://mrnexacademic.netlify.app/
+📌 Visit the website: https://mrnexacademic.netlify.app/
