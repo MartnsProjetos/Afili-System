@@ -1,0 +1,429 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #2b4c8c 0%, #1a365d 100%);
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1500&auto=format') center/cover;
+    opacity: 0.08;
+    transform: scale(1.1);
+    animation: slowZoom 20s infinite alternate;
+  }
+  
+  @keyframes slowZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(45deg, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subtitle {
+    font-size: 1.6rem;
+    opacity: 0.95;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #4ade80;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #4ade80, #22c55e);
+    color: white;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(74, 222, 128, 0.4);
+    background: linear-gradient(45deg, #22c55e, #16a34a);
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #1a365d;
+    margin: 4rem 0;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #4ade80, #22c55e);
+    border-radius: 2px;
+  }
+  
+  main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .products-section {
+    padding: 6rem 0;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card-badge {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: linear-gradient(45deg, #f43f5e, #e11d48);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.2);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .product-card:hover .card-image {
+    transform: scale(1.05);
+  }
+  
+  .product-card h2 {
+    color: #1a365d;
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .product-card p {
+    padding: 0 1.5rem;
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .link-placeholder {
+    display: block;
+    background: linear-gradient(45deg, #4ade80, #22c55e);
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    margin: 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .link-placeholder:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 222, 128, 0.3);
+    background: linear-gradient(45deg, #22c55e, #16a34a);
+  }
+  
+  .testimonials {
+    padding: 6rem 0;
+    background: #f1f5f9;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem 1rem;
+  }
+  
+  .testimonial-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .testimonial-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    border: 4px solid #4ade80;
+    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
+  }
+  
+  .testimonial-card h3 {
+    color: #1a365d;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .testimonial-result {
+    color: #22c55e;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0.8rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .testimonial-card p {
+    color: #64748b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+  
+  .rating {
+    color: #fbbf24;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+  }
+  
+  .whatsapp-button {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 1000;
+  }
+  
+  .whatsapp-button a {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .whatsapp-button a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(45deg, #128c7e, #075e54);
+  }
+  
+  .whatsapp-button i {
+    font-size: 1.6rem;
+    margin-right: 0.8rem;
+  }
+  
+  footer {
+    background: linear-gradient(135deg, #2b4c8c 0%, #1a365d 100%);
+    color: white;
+    padding: 4rem 2rem;
+  }
+  
+  .footer-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4ade80;
+  }
+  
+  .footer-section p {
+    opacity: 0.9;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+  
+  .footer-section i {
+    margin-right: 0.8rem;
+    color: #4ade80;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+    
+    .subtitle {
+      font-size: 1.3rem;
+    }
+    
+    .hero-stats {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1.5rem;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+    }
+    
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 2.2rem;
+    }
+    
+    .cta-button {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+    
+    .testimonial-card {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2.3rem;
+    }
+    
+    .hero-stats {
+      margin: 2rem 0;
+    }
+    
+    .whatsapp-button {
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+    
+    .whatsapp-button a {
+      padding: 0.8rem 1.5rem;
+    }
+  }
